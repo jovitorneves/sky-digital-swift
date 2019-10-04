@@ -1,0 +1,6 @@
+framework module Pods_sky_digital_swiftTests {
+  umbrella header "Pods-sky-digital-swiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
