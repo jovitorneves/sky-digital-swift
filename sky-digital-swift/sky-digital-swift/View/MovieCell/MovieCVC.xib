@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MovieCVC" reuseIdentifier="MovieCVC" id="gTV-IL-0wX" customClass="MovieCVC" customModule="sky_digital_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="284"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="198" height="284"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-je-sev">
+                        <rect key="frame" x="0.0" y="16" width="198" height="252"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvT-ba-vyw" customClass="ImageView" customModule="sky_digital_swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="8" width="198" height="180"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pwi-zr-OiQ">
+                                <rect key="frame" x="8" y="204" width="182" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fXF-LE-FZa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pwi-zr-OiQ" secondAttribute="bottom" constant="8" id="7QY-OU-Ah4"/>
+                            <constraint firstAttribute="trailing" secondItem="pwi-zr-OiQ" secondAttribute="trailing" constant="8" id="Mdm-bn-iZB"/>
+                            <constraint firstAttribute="trailing" secondItem="hvT-ba-vyw" secondAttribute="trailing" id="VXu-9i-a5P"/>
+                            <constraint firstItem="pwi-zr-OiQ" firstAttribute="top" secondItem="hvT-ba-vyw" secondAttribute="bottom" constant="16" id="baz-7a-x8r"/>
+                            <constraint firstItem="hvT-ba-vyw" firstAttribute="top" secondItem="ZlV-je-sev" secondAttribute="top" constant="8" id="kOt-6J-uNb"/>
+                            <constraint firstItem="pwi-zr-OiQ" firstAttribute="leading" secondItem="ZlV-je-sev" secondAttribute="leading" constant="8" id="orD-o7-f4R"/>
+                            <constraint firstItem="hvT-ba-vyw" firstAttribute="leading" secondItem="ZlV-je-sev" secondAttribute="leading" id="sRZ-tW-aJF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZlV-je-sev" secondAttribute="bottom" constant="16" id="BoR-iy-xHy"/>
+                <constraint firstItem="ZlV-je-sev" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XtE-zg-Lam"/>
+                <constraint firstItem="ZlV-je-sev" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="odq-O7-f87"/>
+                <constraint firstAttribute="trailing" secondItem="ZlV-je-sev" secondAttribute="trailing" id="wXn-Hy-Eq4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="196" height="284"/>
+            <connections>
+                <outlet property="movieIV" destination="hvT-ba-vyw" id="gtJ-d4-K1u"/>
+                <outlet property="titleLbl" destination="pwi-zr-OiQ" id="n9R-QJ-zAd"/>
+            </connections>
+            <point key="canvasLocation" x="243.47826086956525" y="160.04464285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
