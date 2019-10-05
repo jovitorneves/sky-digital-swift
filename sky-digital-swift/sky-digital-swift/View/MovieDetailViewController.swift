@@ -25,7 +25,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
     
     //MARK: - Properties
     var images:[ImageShow] = []
-    var movie: Movie!
+    var movie: Movie?
     
     //MARK: - CicleLife
     override func viewDidLoad() {
@@ -37,11 +37,11 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
     
     //MARK: - Actions
     func setScreen(){
-        self.movieIV.loadAndCacheImage(from: self.movie.coverURL ?? "")
-        self.titleLbl.text = "Titulo: \(self.movie.title ?? "")"
-        self.durationLbl.text = "Duração: \(self.movie.duration ?? "desconhecido")"
-        self.launchLbl.text = "Lançamento: \(self.movie.releaseYear ?? "desconhecido" )"
-        self.overViewLbl.text = "Sinopse: \(self.movie.overview ?? "")"
+        self.movieIV.loadAndCacheImage(from: self.movie?.coverURL ?? "")
+        self.titleLbl.text = "Titulo: \(self.movie?.title ?? "")"
+        self.durationLbl.text = "Duração: \(self.movie?.duration ?? "desconhecido")"
+        self.launchLbl.text = "Lançamento: \(self.movie?.releaseYear ?? "desconhecido" )"
+        self.overViewLbl.text = "Sinopse: \(self.movie?.overview ?? "")"
     }
     
     @IBAction func showBackdropsAction(_ sender: UIButton) {

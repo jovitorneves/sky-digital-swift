@@ -16,4 +16,9 @@ extension UIViewController{
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in action?()}))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    //MARK: - Teste Unitario
+    func preload() {
+        _ = self.view
+    }
 }
