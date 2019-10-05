@@ -25,6 +25,7 @@
 		59F01CF22347DCCA0097BD6E /* MovieDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CF12347DCCA0097BD6E /* MovieDetailController.swift */; };
 		59F01CF42347DCFA0097BD6E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CF32347DCFA0097BD6E /* MovieDetailViewController.swift */; };
 		59F01CF72347E2050097BD6E /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CF62347E2050097BD6E /* ImageView.swift */; };
+		59F01CF92348215C0097BD6E /* ImageShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CF82348215C0097BD6E /* ImageShow.swift */; };
 		8E8FA67115A8A3B83A8AB739 /* Pods_sky_digital_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2CB9AF894AA75363E1DFDC /* Pods_sky_digital_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		59F01CF12347DCCA0097BD6E /* MovieDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailController.swift; sourceTree = "<group>"; };
 		59F01CF32347DCFA0097BD6E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		59F01CF62347E2050097BD6E /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		59F01CF82348215C0097BD6E /* ImageShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageShow.swift; sourceTree = "<group>"; };
 		6184771ABE287E19149B707F /* Pods-sky-digital-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky-digital-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sky-digital-swift/Pods-sky-digital-swift.release.xcconfig"; sourceTree = "<group>"; };
 		BF2CB9AF894AA75363E1DFDC /* Pods_sky_digital_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sky_digital_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85905061EE4071EF7074046 /* Pods-sky-digital-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky-digital-swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sky-digital-swiftTests/Pods-sky-digital-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				59F01CDC2347A33A0097BD6E /* Movie.swift */,
+				59F01CF82348215C0097BD6E /* ImageShow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideShowSwift/ImageSlideShowSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -414,6 +418,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideShowSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F01CF92348215C0097BD6E /* ImageShow.swift in Sources */,
 				59F01CDA2347A2E20097BD6E /* RequestManager.swift in Sources */,
 				59F01CB823479C350097BD6E /* MoviesViewController.swift in Sources */,
 				59F01CE02347A4360097BD6E /* MoviesController.swift in Sources */,

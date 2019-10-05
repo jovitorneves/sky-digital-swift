@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 //MARK: - Protocol
 protocol MoviesViewControllerProtocol {
@@ -41,14 +42,20 @@ class MoviesViewController: UIViewController, MoviesViewControllerProtocol {
     }
     
     func loadMovies(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Carregando"
+        hud.show(in: self.view)
+        
         controller?.getMovies(completion: { (movies) in
             guard let movies = movies else{
                 return
             }
             self.movies = movies
             self.collectionView.reloadData()
+            hud.dismiss(afterDelay: 3.0)
         }, failure: { (error) in
             self.alert(title: "Atenção", message: error.localizedDescription)
+            hud.dismiss(afterDelay: 3.0)
         })
     }
 

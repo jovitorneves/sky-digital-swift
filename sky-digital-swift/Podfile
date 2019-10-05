@@ -9,6 +9,7 @@ target 'sky-digital-swift' do
    pod 'Alamofire', '~> 4.7'
    pod 'Cartography'
    pod 'ImageSlideShowSwift'
+   pod 'JGProgressHUD'
 
   target 'sky-digital-swiftTests' do
     inherit! :search_paths

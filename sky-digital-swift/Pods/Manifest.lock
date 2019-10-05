@@ -2,23 +2,27 @@ PODS:
   - Alamofire (4.9.0)
   - Cartography (4.0.0)
   - ImageSlideShowSwift (0.1.6)
+  - JGProgressHUD (2.0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Cartography
   - ImageSlideShowSwift
+  - JGProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Cartography
     - ImageSlideShowSwift
+    - JGProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
   ImageSlideShowSwift: 690f658ed22cf900df80c10a729885cd0c8f6988
+  JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
 
-PODFILE CHECKSUM: d4208415ca551da4da2917ede98b64c62d6d7b11
+PODFILE CHECKSUM: 05ebead50d1353aea973e9f4d6393c4afb87d243
 
 COCOAPODS: 1.5.3

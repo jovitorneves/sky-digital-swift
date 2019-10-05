@@ -20,7 +20,10 @@
                         <rect key="frame" x="0.0" y="16" width="198" height="252"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvT-ba-vyw" customClass="ImageView" customModule="sky_digital_swift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="8" width="198" height="180"/>
+                                <rect key="frame" x="27" y="8" width="144" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hvT-ba-vyw" secondAttribute="height" multiplier="4:5" id="lgo-hy-4lQ"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="3"/>
@@ -41,11 +44,12 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pwi-zr-OiQ" secondAttribute="bottom" constant="8" id="7QY-OU-Ah4"/>
                             <constraint firstAttribute="trailing" secondItem="pwi-zr-OiQ" secondAttribute="trailing" constant="8" id="Mdm-bn-iZB"/>
-                            <constraint firstAttribute="trailing" secondItem="hvT-ba-vyw" secondAttribute="trailing" id="VXu-9i-a5P"/>
+                            <constraint firstItem="hvT-ba-vyw" firstAttribute="centerX" secondItem="ZlV-je-sev" secondAttribute="centerX" id="Pzz-p5-GK5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hvT-ba-vyw" secondAttribute="trailing" id="VXu-9i-a5P"/>
                             <constraint firstItem="pwi-zr-OiQ" firstAttribute="top" secondItem="hvT-ba-vyw" secondAttribute="bottom" constant="16" id="baz-7a-x8r"/>
                             <constraint firstItem="hvT-ba-vyw" firstAttribute="top" secondItem="ZlV-je-sev" secondAttribute="top" constant="8" id="kOt-6J-uNb"/>
                             <constraint firstItem="pwi-zr-OiQ" firstAttribute="leading" secondItem="ZlV-je-sev" secondAttribute="leading" constant="8" id="orD-o7-f4R"/>
-                            <constraint firstItem="hvT-ba-vyw" firstAttribute="leading" secondItem="ZlV-je-sev" secondAttribute="leading" id="sRZ-tW-aJF"/>
+                            <constraint firstItem="hvT-ba-vyw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZlV-je-sev" secondAttribute="leading" id="sRZ-tW-aJF"/>
                         </constraints>
                     </view>
                 </subviews>
