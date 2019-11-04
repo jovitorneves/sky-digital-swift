@@ -10,8 +10,15 @@ import Alamofire
 
 class RequestManager {
     
+    //MARK: - Properties
+    private static var instance = RequestManager()
+    
+    private init(){}
+    
     // MARK: - Singleton
-    static let shared = RequestManager()
+    public class var shared: RequestManager {
+        return instance
+    }
     
     // MARK: - GET
     public func get<T:Codable>(_ url: String, model: T.Type, headers: HTTPHeaders = [:], completion: @escaping (T?) -> Void, onFailure: @escaping (Error) -> Void ) {
