@@ -14,6 +14,7 @@
 
 ![Image of Yaktocat](screenshot/cenas_filme.png)
 
+---
 ### Detalhes e requisitos:
 -  Xcode 11.2
 -  Swift 5
