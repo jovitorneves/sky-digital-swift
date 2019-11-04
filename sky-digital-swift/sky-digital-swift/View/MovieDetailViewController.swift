@@ -25,7 +25,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
     
     //MARK: - Properties
     var images:[ImageShow] = []
-    var movie: Movie?
+    var movie: Movie!
     
     //MARK: - CicleLife
     override func viewDidLoad() {
@@ -37,15 +37,15 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
     
     //MARK: - Actions
     func setScreen(){
-        self.movieIV.loadAndCacheImage(from: self.movie?.coverURL ?? "")
-        self.titleLbl.text = "Titulo: \(self.movie?.title ?? "")"
-        self.durationLbl.text = "Duração: \(self.movie?.duration ?? "desconhecido")"
-        self.launchLbl.text = "Lançamento: \(self.movie?.releaseYear ?? "desconhecido" )"
-        self.overViewLbl.text = "Sinopse: \(self.movie?.overview ?? "")"
+        self.movieIV.loadAndCacheImage(from: self.movie.coverURL ?? "")
+        self.titleLbl.text = "Titulo: \(self.movie.title ?? "")"
+        self.durationLbl.text = "Duração: \(self.movie.duration ?? "desconhecido")"
+        self.launchLbl.text = "Lançamento: \(self.movie.releaseYear ?? "desconhecido" )"
+        self.overViewLbl.text = "Sinopse: \(self.movie.overview ?? "")"
     }
     
     @IBAction func showBackdropsAction(_ sender: UIButton) {
-        if self.movie?.backdropsURL?.count == 0{
+        guard !(self.movie.backdropsURL?.isEmpty ?? true) else{
             return
         }
         
@@ -56,13 +56,12 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
         }
     }
     
-    private func generateImages()
-    {
-        if self.movie?.backdropsURL?.count == 0{
+    private func generateImages(){
+        guard !(self.movie.backdropsURL?.isEmpty ?? true) else{
             return
         }
         
-        for urlImage in self.movie?.backdropsURL ?? []{
+        for urlImage in self.movie.backdropsURL ?? []{
             if !urlImage.isEmpty{
                 images.append(ImageShow(url: URL(string: urlImage)!))
             }

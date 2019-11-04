@@ -21,7 +21,7 @@ class MovieCVC: UICollectionViewCell {
     }
     
     //MARK: - Actions
-    func setCell(movie: Movie){
+    func setCell(movie: Movie!){
         self.movieIV.loadAndCacheImage(from: movie.coverURL ?? "")
         self.titleLbl.text = movie.title ?? "Desconhecido"
     }

@@ -12,9 +12,9 @@ class ImageShow: NSObject, ImageSlideShowProtocol
 {
     var title: String?
     
-    fileprivate let url:URL
+    fileprivate let url: URL
     
-    init(url:URL) {
+    init(url: URL) {
         self.url = url
     }
     
@@ -37,7 +37,7 @@ class ImageShow: NSObject, ImageSlideShowProtocol
                 completion(nil, error)
             }
             
-            }.resume()
+        }.resume()
         
     }
 }

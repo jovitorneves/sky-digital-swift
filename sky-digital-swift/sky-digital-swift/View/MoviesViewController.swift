@@ -72,7 +72,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if !self.movies.indices.contains(indexPath.row){
+        guard self.movies.indices.contains(indexPath.row) else{
             return UICollectionViewCell()
         }
         let movie = self.movies[indexPath.row]
@@ -84,7 +84,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !self.movies.indices.contains(indexPath.row){
+        guard self.movies.indices.contains(indexPath.row) else{
             return
         }
         let movie = self.movies[indexPath.row]

@@ -16,9 +16,7 @@ class RequestManager {
     // MARK: - GET
     public func get<T:Codable>(_ url: String, model: T.Type, headers: HTTPHeaders = [:], completion: @escaping (T?) -> Void, onFailure: @escaping (Error) -> Void ) {
         
-        guard let isInternet = NetworkReachabilityManager()?.isReachable else{ return }
-        
-        if (!isInternet){
+        guard let _ = NetworkReachabilityManager()?.isReachable else{
             let error = NSError.init(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Dispositivo sem internet"])
             onFailure(error)
             return
@@ -30,13 +28,6 @@ class RequestManager {
         }
         
         Alamofire.request(url, headers: h).validate().responseJSON { response in
-            let statusCode = response.response?.statusCode
-            print("statusCode: \(String(describing: statusCode))")
-            if statusCode == 401 {
-                let unauthorizeError = NSError(domain: "unauthorize.error", code: 401, userInfo:[NSLocalizedDescriptionKey : "Authorization has been denied for this request."])
-                onFailure(unauthorizeError)
-                return
-            }
             
             switch response.result {
             case .success:
