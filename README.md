@@ -29,7 +29,8 @@
 
 ---
 ### Arquitetura:
-O projeto foi feito em MVC, a estrutura de arquivos é baseada em três camadas principais:
-- *Model*: Contém os objetos utilizados na requisição e nas views.
-- *View:* Contém as views do app.
-- *Controller:* Faz o gerenciamento entre a view e a model.
+O projeto foi feito em MVC, a estrutura de arquivos é baseada em três camadas principais, mais o Coordinator:
+- *Model: Contém os objetos utilizados na requisição e nas views.
+- *View: Contém as views do app.
+- *Controller: Faz o gerenciamento entre a view e a model.
+- *Coordinator: Faz o gerenciamento de navegação de telas.
