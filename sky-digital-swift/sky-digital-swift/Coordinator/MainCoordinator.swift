@@ -31,6 +31,6 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         vc.movie = movie
         navigationController.pushViewController(vc, animated: true)
-    }
+    } 
     
 }
