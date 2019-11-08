@@ -15,9 +15,10 @@ protocol MoviesViewControllerProtocol {
     func loadMovies()
 }
 
-class MoviesViewController: UIViewController, MoviesViewControllerProtocol {
+class MoviesViewController: UIViewController, Storyboarded, MoviesViewControllerProtocol {
 
     //MARK: - Properties
+    weak var coordinator: MainCoordinator?
     var controller: MoviesController?
     var movies: [Movie] = []
     
@@ -89,7 +90,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         let movie = self.movies[indexPath.row]
         
-        self.controller?.goToMovieDetail(movie: movie)
+        coordinator?.goToMovieDetail(movie: movie)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A20F49E904F0322ECCBA31D /* Pods_sky_digital_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC951A36A19368B83580EE /* Pods_sky_digital_swiftTests.framework */; };
+		59C48997237493F000FCB46B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C48996237493F000FCB46B /* Coordinator.swift */; };
+		59C489992374966900FCB46B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C489982374966900FCB46B /* Storyboarded.swift */; };
+		59C4899B23749AE000FCB46B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4899A23749AE000FCB46B /* MainCoordinator.swift */; };
 		59F01CB423479C350097BD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CB323479C350097BD6E /* AppDelegate.swift */; };
 		59F01CB823479C350097BD6E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F01CB723479C350097BD6E /* MoviesViewController.swift */; };
 		59F01CBB23479C350097BD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F01CB923479C350097BD6E /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		38F61B5452E43B66974B6BFD /* Pods-sky-digital-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky-digital-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sky-digital-swift/Pods-sky-digital-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		50B98B067D3EC17DD696D9B0 /* Pods-sky-digital-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky-digital-swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sky-digital-swiftTests/Pods-sky-digital-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		59C48996237493F000FCB46B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		59C489982374966900FCB46B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		59C4899A23749AE000FCB46B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		59F01CB023479C350097BD6E /* sky-digital-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sky-digital-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F01CB323479C350097BD6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F01CB723479C350097BD6E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59C48995237493B500FCB46B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59C48996237493F000FCB46B /* Coordinator.swift */,
+				59C489982374966900FCB46B /* Storyboarded.swift */,
+				59C4899A23749AE000FCB46B /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		59F01CA723479C350097BD6E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +129,7 @@
 			children = (
 				59F01CE32347AB270097BD6E /* Common */,
 				59F01CD82347A2CB0097BD6E /* Repository */,
+				59C48995237493B500FCB46B /* Coordinator */,
 				59F01CDB2347A3050097BD6E /* Model */,
 				59F01CDE2347A41D0097BD6E /* Controller */,
 				59F01CE12347A4B40097BD6E /* View */,
@@ -423,6 +440,7 @@
 			files = (
 				59F01CF92348215C0097BD6E /* ImageShow.swift in Sources */,
 				59F01CDA2347A2E20097BD6E /* RequestManager.swift in Sources */,
+				59C48997237493F000FCB46B /* Coordinator.swift in Sources */,
 				59F01CB823479C350097BD6E /* MoviesViewController.swift in Sources */,
 				59F01CE02347A4360097BD6E /* MoviesController.swift in Sources */,
 				59F01CDD2347A33A0097BD6E /* Movie.swift in Sources */,
@@ -433,6 +451,8 @@
 				59F01CE62347AB440097BD6E /* UIViewControllerExtension.swift in Sources */,
 				59F01CB423479C350097BD6E /* AppDelegate.swift in Sources */,
 				59F01CE82347AD5C0097BD6E /* SceneDelegate.swift in Sources */,
+				59C4899B23749AE000FCB46B /* MainCoordinator.swift in Sources */,
+				59C489992374966900FCB46B /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

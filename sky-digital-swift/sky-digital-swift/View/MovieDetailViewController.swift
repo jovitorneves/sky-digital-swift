@@ -14,7 +14,7 @@ protocol MovieDetailViewControllerProtocol {
     func setScreen()
 }
 
-class MovieDetailViewController: UIViewController, MovieDetailViewControllerProtocol {
+class MovieDetailViewController: UIViewController, Storyboarded, MovieDetailViewControllerProtocol {
 
     //MARK: - Outlets
     @IBOutlet weak var movieIV: ImageView!
@@ -24,6 +24,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewControllerProt
     @IBOutlet weak var overViewLbl: UILabel!
     
     //MARK: - Properties
+    weak var coordinator: MainCoordinator?
     var images:[ImageShow] = []
     var movie: Movie!
     

@@ -15,7 +15,6 @@ typealias failure = (Error) -> Void
 //MARK: - Protocol
 protocol MoviesControllerProtocol {
     func getMovies(completion: @escaping completionMovies, failure: @escaping failure)
-    func goToMovieDetail(movie: Movie!)
 }
 
 class MoviesController: MoviesControllerProtocol {
@@ -35,12 +34,5 @@ class MoviesController: MoviesControllerProtocol {
         }) { (error) in
             failure(error)
         }
-    }
-    
-    //MARK: - Router
-    func goToMovieDetail(movie: Movie!){
-        let movieDetail = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
-        movieDetail.movie = movie
-        self.viewController?.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }
